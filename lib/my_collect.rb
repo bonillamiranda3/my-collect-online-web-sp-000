@@ -1,7 +1,10 @@
 def my_collect(array)
-  collected = []
-  array.each do |el|
-    collected << yield(el)
+  i = 0
+  collection = []
+  while i < array.length
+    collection << yield(array[i])
+    i += 1
   end
-  collected
+  
+  collection
 end
